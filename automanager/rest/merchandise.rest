@@ -1,0 +1,42 @@
+### 📌 Criar novo produto (Merchandise)
+POST http://localhost:8080/merchandise/create
+Content-Type: application/json
+
+{
+  "expirationDate": "2026-12-31",
+  "manufactureDate": "2024-01-01",
+  "registrationDate": "2025-06-30",
+  "name": "Produto Exemplo",
+  "quantity": 100,
+  "price": 49.90,
+  "description": "Produto de teste com validade longa",
+  "company": {
+    "id": 1
+  }
+}
+
+### 📌 Listar todos os produtos
+GET http://localhost:8080/merchandise/list
+
+### 📌 Buscar produto por ID
+GET http://localhost:8080/merchandise/1
+
+### 📌 Atualizar produto
+PUT http://localhost:8080/merchandise/update/1
+Content-Type: application/json
+
+{
+  "expirationDate": "2027-01-01",
+  "manufactureDate": "2025-01-01",
+  "registrationDate": "2025-06-30",
+  "name": "Produto Atualizado",
+  "quantity": 150,
+  "price": 59.90,
+  "description": "Versão atualizada do produto",
+  "company": {
+    "id": 1
+  }
+}
+
+### 📌 Deletar produto
+DELETE http://localhost:8080/merchandise/delete/1

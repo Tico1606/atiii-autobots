@@ -1,0 +1,31 @@
+### 📌 Criar novo serviço
+POST http://localhost:8080/service/create
+Content-Type: application/json
+
+{
+  "name": "Instalação de Alarme",
+  "price": 250.00,
+  "description": "Instalação completa de sistema de alarme veicular",
+  "company": {
+    "id": 3
+  }
+}
+
+### 📌 Listar todos os serviços
+GET http://localhost:8080/service/list
+
+### 📌 Buscar serviço por ID
+GET http://localhost:8080/service/1
+
+### 📌 Atualizar serviço
+PUT http://localhost:8080/service/update/2
+Content-Type: application/json
+
+{
+  "name": "Instalação e Configuração de Alarme",
+  "price": 300.00,
+  "description": "Inclui instalação e configuração completa"
+}
+
+### 📌 Deletar serviço por ID
+DELETE http://localhost:8080/service/delete/1

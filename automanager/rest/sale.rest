@@ -1,0 +1,76 @@
+### 📌 Criar uma nova venda
+POST http://localhost:8080/sale/create
+Content-Type: application/json
+
+{
+  "registrationDate": "2025-06-30",
+  "identification": "VENDA-001",
+  "company": {
+    "id": 1
+  },
+  "customer": {
+    "id": 2
+  },
+  "employee": {
+    "id": 3
+  },
+  "merchandises": [
+    {
+      "id": 4
+    }
+  ],
+  "services": [
+    {
+      "id": 5
+    }
+  ],
+  "vehicle": {
+    "id": 6
+  }
+}
+
+### 📌 Listar todas as vendas
+GET http://localhost:8080/sale/list
+
+### 📌 Buscar venda por ID
+GET http://localhost:8080/sale/1
+
+### 📌 Atualizar uma venda existente
+PUT http://localhost:8080/sale/update/1
+Content-Type: application/json
+
+{
+  "registrationDate": "2025-07-01",
+  "identification": "VENDA-001-ATUALIZADA",
+  "company": {
+    "id": 1
+  },
+  "customer": {
+    "id": 2
+  },
+  "employee": {
+    "id": 3
+  },
+  "merchandises": [
+    {
+      "id": 4
+    },
+    {
+      "id": 7
+    }
+  ],
+  "services": [
+    {
+      "id": 5
+    },
+    {
+      "id": 8
+    }
+  ],
+  "vehicle": {
+    "id": 6
+  }
+}
+
+### 📌 Deletar uma venda por ID
+DELETE http://localhost:8080/sale/1

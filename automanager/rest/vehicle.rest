@@ -1,0 +1,31 @@
+### 🚗 Criar novo veículo
+POST http://localhost:8080/vehicle/create
+Content-Type: application/json
+
+{
+  "type": "HATCH",
+  "model": "Toyota Corolla",
+  "plate": "XYZ-1234",
+  "company": {
+    "id": 3
+  }
+}
+
+### 📋 Listar todos os veículos
+GET http://localhost:8080/vehicle/list
+
+### 🔍 Buscar veículo por ID
+GET http://localhost:8080/vehicle/1
+
+### ✏️ Atualizar veículo
+PUT http://localhost:8080/vehicle/update/1
+Content-Type: application/json
+
+{
+  "type": "TRUCK",
+  "model": "Scania R500",
+  "plate": "TRK-9087"
+}
+
+### ❌ Deletar veículo
+DELETE http://localhost:8080/vehicle/delete/1

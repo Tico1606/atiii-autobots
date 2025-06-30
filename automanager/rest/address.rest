@@ -1,0 +1,42 @@
+### 📌 Criar novo endereço
+POST http://localhost:8080/address/register
+Content-Type: application/json
+
+{
+  "state": "SP",
+  "city": "São Paulo",
+  "district": "Centro",
+  "street": "Rua das Flores",
+  "number": "123",
+  "postalCode": "01001-000",
+  "additionalInfo": "Apartamento 45"
+}
+
+### 📌 Buscar todos os endereços
+GET http://localhost:8080/addresses
+
+### 📌 Buscar endereço por ID
+GET http://localhost:8080/address/1
+
+### 📌 Atualizar endereço existente
+PUT http://localhost:8080/address/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "state": "RJ",
+  "city": "Rio de Janeiro",
+  "district": "Copacabana",
+  "street": "Rua Atlântica",
+  "number": "999",
+  "postalCode": "22010-000",
+  "additionalInfo": "Cobertura 101"
+}
+
+### 📌 Remover endereço por ID
+DELETE http://localhost:8080/address/delete
+Content-Type: application/json
+
+{
+  "id": 1
+}

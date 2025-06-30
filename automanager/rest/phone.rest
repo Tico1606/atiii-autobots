@@ -1,0 +1,32 @@
+### 📌 Criar novo telefone
+POST http://localhost:8080/phone/register
+Content-Type: application/json
+
+{
+  "areaCode": "11",
+  "number": "912345678"
+}
+
+### 📌 Listar todos os telefones
+GET http://localhost:8080/phones
+
+### 📌 Buscar telefone por ID
+GET http://localhost:8080/phone/1
+
+### 📌 Atualizar telefone
+PUT http://localhost:8080/phone/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "areaCode": "21",
+  "number": "998877665"
+}
+
+### 📌 Deletar telefone
+DELETE http://localhost:8080/phone/delete
+Content-Type: application/json
+
+{
+  "id": 1
+}

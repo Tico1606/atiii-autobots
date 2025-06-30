@@ -1,0 +1,76 @@
+### 📌 Criar nova empresa
+POST http://localhost:8080/company/register
+Content-Type: application/json
+
+{
+  "legalName": "Empresa Teste LTDA",
+  "tradeName": "Teste Comércio",
+  "registrationDate": "2023-06-01",
+  "address": {
+    "state": "SP",
+    "city": "São Paulo",
+    "district": "Centro",
+    "street": "Rua das Empresas",
+    "number": "100",
+    "postalCode": "01000-000",
+    "additionalInfo": "Sala 202"
+  },
+  "phones": [
+    {
+      "areaCode": "11",
+      "number": "998877665"
+    },
+    {
+      "areaCode": "11",
+      "number": "33445566"
+    }
+  ],
+  "users": [],
+  "merchandises": [],
+  "services": [],
+  "sales": []
+}
+
+### 📌 Listar todas as empresas
+GET http://localhost:8080/companies
+
+### 📌 Buscar empresa por ID
+GET http://localhost:8080/company/1
+
+### 📌 Atualizar empresa
+PUT http://localhost:8080/company/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "legalName": "Empresa Teste Atualizada LTDA",
+  "tradeName": "Teste Atualizado Comércio",
+  "registrationDate": "2023-06-10",
+  "address": {
+    "state": "RJ",
+    "city": "Rio de Janeiro",
+    "district": "Copacabana",
+    "street": "Avenida Atlântica",
+    "number": "1234",
+    "postalCode": "22010-000",
+    "additionalInfo": "Bloco B"
+  },
+  "phones": [
+    {
+      "areaCode": "21",
+      "number": "987654321"
+    }
+  ],
+  "users": [],
+  "merchandises": [],
+  "services": [],
+  "sales": []
+}
+
+### 📌 Deletar empresa
+DELETE http://localhost:8080/company/delete
+Content-Type: application/json
+
+{
+  "id": 2
+}

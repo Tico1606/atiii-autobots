@@ -1,0 +1,82 @@
+### Criar usuário
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "name": "João da Silva",
+  "socialName": "Joãozinho",
+  "role": "GERENTE",
+  "inactive": false,
+  "company": {
+    "id": 1
+  },
+  "address": {
+    "state": "RJ",
+    "city": "Rio de Janeiro",
+    "district": "Centro",
+    "street": "Rua das Copas",
+    "number": "235",
+    "postalCode": "02301-000",
+    "additionalInfo": "Apartamento 25"
+  },
+  "phones": [
+    {
+      "areaCode": "11",
+      "number": "98888-7777"
+    }
+  ],
+  "emails": [
+    {
+      "address": "joao@example.com"
+    }
+  ],
+  "credentialUserPassword": {
+    "username": "joaosilva",
+    "password": "123456"
+  },
+  "credentialBarcode": {
+    "code": "123456789"
+  }
+}
+
+###
+
+### Listar usuários
+GET http://localhost:8080/user/list
+
+###
+
+### Buscar usuário por ID
+GET http://localhost:8080/user/1
+
+###
+
+### Atualizar usuário
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "name": "João da Silva Atualizado",
+  "socialName": "João",
+  "role": "ADMIN",
+  "inactive": false,
+  "company": {
+    "id": 1
+  },
+  "phones": [
+    {
+      "areaCode": "11",
+      "number": "97777-8888"
+    }
+  ],
+  "emails": [
+    {
+      "address": "joao.atualizado@example.com"
+    }
+  ]
+}
+
+###
+
+### Deletar usuário
+DELETE http://localhost:8080/user/delete/1
